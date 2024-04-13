@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | GitHub user search app</title>
+    <link rel="stylesheet" href="/public/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>devfinder</h1>
+      <div class="mode">
+        <span id="screen-mode">light</span>
+        <button
+          id="modeBtn"
+          data-theme-toggle
+          aria-label="Change to light theme"
+        >
+          <img
+            id="screen-mode-icon"
+            src="/assets/icon-sun.svg"
+            alt="icon-sun"
+          />
+        </button>
+      </div>
+    </header>
+    <form autocomplete="off">
+      <img src="/assets/icon-search.svg" alt="icon-search" />
+      <input
+        id="searchQuery"
+        type="text"
+        placeholder="Search GitHub username..."
+      />
+      <span id="error" class="hidden">No results</span>
+      <button id="search">Search</button>
+    </form>
+    <main class="hidden">
+      <div class="img-cotainer">
+        <img id="avatar" src="/assets/bitmap.png" alt="bitmap" />
+      </div>
+      <div class="git-profile">
+        <div>
+          <h2 id="username">The Octocat</h2>
+          <h6 id="tag-name">@octocat</h6>
+          <p id="bio">This profile has no bio</p>
+        </div>
+        <p id="created-date">Joined 25 Jan 2011</p>
+        <div class="git-follower">
+          <span class="title">Repos</span>
+          <span class="title">Followers</span>
+          <span class="title">Following</span>
+          <span id="repo" class="number">8</span>
+          <span id="follower" class="number">3938</span>
+          <span id="following" class="number">9</span>
+        </div>
+        <div class="user-location">
+          <div class="item">
+            <img src="/assets/icon-location.svg" alt="icon-location" />
+            <p id="location">San Francisco</p>
+          </div>
+          <div class="item">
+            <img src="/assets/icon-twitter.svg" alt="icon-twitter" />
+            <p id="twitter">Not Available</p>
+          </div>
+          <div class="item">
+            <img src="/assets/icon-website.svg" alt="icon-website" />
+            <p id="blog">https://github.blog</p>
+          </div>
+          <div class="item">
+            <img src="/assets/icon-company.svg" alt="icon-company" />
+            <p id="company">@github</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="/public/bundle.js"></script>
+  </body>
+</html>

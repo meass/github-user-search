@@ -1,0 +1,108 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+[data-theme='light'] {
+  --color-bg: rgb(246, 248, 255);
+  --color-fg: rgb(20, 29, 4);
+  --color-form: #ffffff;
+  --color-header-text: #222731;
+  --color-follower-title: #4b6a9b;
+}
+[data-theme='dark'] {
+  --color-bg: rgb(20, 29, 47);
+  --color-fg: #ffffff;
+  --color-form: #1e2a47;
+  --color-header-text: #ffffff;
+  --color-follower-title: white;
+}
+
+body {
+  @apply font-monospace flex flex-col w-full justify-center md:h-screen h-full max-md:px-4;
+  background-color: var(--color-bg);
+}
+header {
+  @apply max-w-[730px] mx-auto flex justify-between pb-8 w-full max-md:pt-4;
+  color: var(--color-header-text);
+}
+header h1 {
+  @apply font-bold text-2xl;
+}
+.mode {
+  @apply flex items-center;
+}
+.mode span {
+  @apply px-2 uppercase;
+}
+form {
+  @apply max-w-[730px] mx-auto flex w-full px-2 py-2 rounded-xl items-center;
+  background-color: var(--color-form);
+  color: var(--color-header-text);
+}
+form input[type='text'] {
+  @apply max-w-[400px] w-full focus:outline-none bg-transparent;
+}
+form input[type='text']::placeholder {
+  color: var(--color-header-text);
+}
+form img {
+  @apply px-6;
+}
+form button {
+  @apply w-[106px] bg-light-blue text-white py-2 rounded-lg hover:bg-[#60ABFF];
+}
+main {
+  @apply grid max-w-[730px] md:grid-cols-[auto_1fr] auto-cols-fr mx-auto md:p-12 p-4 gap-x-12 mt-4 rounded-xl w-full opacity-100 transition-opacity duration-300;
+  background-color: var(--color-form);
+}
+#avatar {
+  @apply max-w-[117px] rounded-full;
+}
+.git-profile {
+  @apply grid grid-cols-2 w-full flex-1;
+  color: var(--color-header-text);
+}
+.git-profile h2 {
+  @apply font-bold text-2xl;
+}
+.git-profile h6 {
+  @apply py-2 text-light-blue;
+}
+.git-profile p {
+  @apply justify-self-end font-extralight;
+}
+.git-profile div p {
+  @apply py-4 font-extralight;
+}
+.git-follower {
+  @apply py-2 my-4 px-8 rounded-xl;
+  background-color: var(--color-bg);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.git-follower .title {
+  @apply text-xs;
+  color: var(--color-follower-title);
+}
+.git-follower .number {
+  @apply text-xl font-bold;
+  color: var(--color-header-text);
+}
+.user-location {
+  @apply grid grid-cols-2 col-span-3 font-extralight text-sm gap-x-12;
+}
+.user-location .item {
+  @apply flex items-center;
+}
+.user-location .item img {
+  @apply pr-4;
+}
+.hidden,
+#error.hidden {
+  @apply opacity-0;
+}
+#error {
+  @apply text-[#F74646] mx-4 opacity-100 transition-opacity duration-300;
+}
