@@ -95,3 +95,4 @@ modeBtn.addEventListener('click', function () {
     modeIcon.src = '/assets/icon-sun.svg';
   }
 });
+// update build
