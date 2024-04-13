@@ -1,6 +1,4 @@
 const token = process.env.TOKEN;
-console.log({ token });
-
 const avatar = document.querySelector('#avatar') as HTMLImageElement;
 const userName = document.querySelector('#username') as HTMLHeadingElement;
 const tagName = document.querySelector('#tag-name') as HTMLHeadElement;
